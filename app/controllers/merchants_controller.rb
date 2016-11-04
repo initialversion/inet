@@ -1,6 +1,6 @@
 class MerchantsController < ApplicationController
   def index
-    @merchants = Merchant.all
+    @merchants = Merchant.page(params[:page])
   end
 
   def show
